@@ -1,9 +1,6 @@
 // Package modules.
 import { Optimizer } from '@parcel/plugin';
-import posthtml from 'posthtml';
-import urls from 'posthtml-urls';
-
-
+import url from 'url';
 
 /*
  * Extract a meta from a given html string
@@ -20,7 +17,7 @@ const findMeta = (html, propertyName, propertyValue) => {
 /*
  * Extract the content of a given meta html
  */
-const getMetaTagContent = metaTagHtml => {
+const getMetaTagContent = (metaTagHtml) => {
   const regex = /content=["]([^"]*)["]/i;
   const regexExec = regex.exec(metaTagHtml);
   if (regexExec) {
@@ -36,14 +33,14 @@ const patchMetaToAbsolute = (metaHTML, baseUrl) => {
   const metaContent = getMetaTagContent(metaHTML);
   return metaHTML.replace(
     metaContent,
-    url.resolve(baseUrl, metaContent) // Relative url to absolute url
+    url.resolve(baseUrl, metaContent), // Relative url to absolute url
   );
 };
 
 // Exports.
 export default new Optimizer({
   async optimize({
-    bundle,
+
     contents,
     map,
     options,
@@ -62,13 +59,12 @@ export default new Optimizer({
     // Fetch original meta
     const opengraphImageMeta = findMeta(contents, 'property', 'og:image');
     if (opengraphImageMeta) {
-      contents = contents.replace(
-        opengraphImageMeta,
-        patchMetaToAbsolute(opengraphImageMeta, ogUrl)
-      );
+      return {
+        contents: contents.replace(
+          opengraphImageMeta,
+          patchMetaToAbsolute(opengraphImageMeta, ogUrl),
+        ),
+      };
     }
-    return {
-      contents: (await posthtml([plugin]).process(contents)).html,
-    };
   },
 });
