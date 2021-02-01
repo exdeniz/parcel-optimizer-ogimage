@@ -1,0 +1,68 @@
+Arguments: 
+  /usr/local/bin/node /usr/bin/yarn
+
+PATH: 
+  /usr/local/opt/ncurses/bin:/home/exdeniz/.local/bin:/home/exdeniz//bin:/home/exdeniz/.yarn/bin:/home/exdeniz/.config/yarn/global/node_modules/.bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/opt/ncurses/bin:/home/exdeniz/.local/bin:/home/exdeniz//bin:/home/exdeniz/.yarn/bin:/home/exdeniz/.config/yarn/global/node_modules/.bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Library/PostgreSQL/9.3/bin/:/home/exdeniz/.fzf/bin:/home/exdeniz/.go/bin:/usr/lib/go/bin:/usr/lib/jvm/default/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Library/PostgreSQL/9.3/bin/:/home/exdeniz/.go/bin:/usr/lib/go/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.10.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/exdeniz/Project/fork/parcel-optimizer-ogimage/package.json: Unexpected token } in JSON at position 574
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "parcel-optimizer-ogimage",
+    "version": "0.1.0",
+    "description": "Set absolute URL for og:image  meta tags.",
+    "keywords": [
+      "parcel",
+      "parcel-optimizer",
+      "parcel-plugin",
+      "ogimage",
+      "open-graph"
+    ],
+    "author": "",
+    "repository": "exdeniz/parcel-optimizer-ogimage",
+    "license": "MIT",
+    "main": "lib/",
+    "module": "src/",
+    "scripts": {
+      "lint": "eslint src/",
+      "build": "babel src/ -d lib/",
+      "preversion": "npm run lint && npm run build && git add -A lib/"
+    },
+    "dependencies": {
+      "@parcel/plugin": "^2.0.0-beta.1",
+    },
+    "devDependencies": {
+      "@babel/cli": "^7.12.7",
+      "@babel/core": "^7.12.7",
+      "@babel/preset-env": "^7.12.7",
+      "babel-eslint": "^10.1.0",
+      "eslint": "^7.14.0",
+      "eslint-config-airbnb-base": "^14.2.1",
+      "eslint-plugin-import": "^2.22.1"
+    },
+    "engines": {
+      "node": ">=10",
+      "parcel": "^2.0.0-alpha"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

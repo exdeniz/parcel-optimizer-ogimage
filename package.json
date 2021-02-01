@@ -1,0 +1,38 @@
+{
+  "name": "parcel-optimizer-ogimage",
+  "version": "0.1.0",
+  "description": "Set absolute URL for og:image  meta tags.",
+  "keywords": [
+    "parcel",
+    "parcel-optimizer",
+    "parcel-plugin",
+    "ogimage",
+    "open-graph"
+  ],
+  "author": "",
+  "repository": "exdeniz/parcel-optimizer-ogimage",
+  "license": "MIT",
+  "main": "lib/",
+  "module": "src/",
+  "scripts": {
+    "lint": "eslint src/",
+    "build": "babel src/ -d lib/",
+    "preversion": "npm run lint && npm run build && git add -A lib/"
+  },
+  "dependencies": {
+    "@parcel/plugin": "^2.0.0-beta.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.7",
+    "@babel/core": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "engines": {
+    "node": ">=10",
+    "parcel": "^2.0.0-alpha"
+  }
+}
