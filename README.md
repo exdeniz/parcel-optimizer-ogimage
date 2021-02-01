@@ -1,6 +1,6 @@
 # parcel-optimizer-ogimage
 
-> Set absolute URL for og:image and twitter:image meta tags.
+> Set absolute URL for og:image meta tags.
 
 
 *This plugin is based on [Luke Childs](https://github.com/lukechilds/parcel-plugin-ogimage) and [nothingrandom](https://github.com/nothingrandom/parcel-plugin-ogimage)  and [Eliepse](https://github.com/Eliepse/parcel-plugin-metaimage) code.*
