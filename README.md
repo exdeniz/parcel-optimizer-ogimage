@@ -34,7 +34,6 @@ Just install this package as a development dependency. Parcel will automatically
 You **must** have both `og:image` and `og:url` meta tags:
 
 ```html
-<meta name="twitter:image" content="card.png">
 <meta property="og:image" content="card.png">
 <meta property="og:url" content="https://example.com">
 ```
@@ -42,15 +41,13 @@ You **must** have both `og:image` and `og:url` meta tags:
 Parcel will generate that into something like this:
 
 ```html
-<meta name="twitter:image" content="/card.9190ce93.png">
 <meta property="og:image" content="/card.9190ce93.png">
 <meta property="og:url" content="https://example.com">
 ```
 
-`parcel-plugin-ogimage` will then update the `og:image` and `twitter:image` with an absolute URL:
+`parcel-optimizer-ogimage` will then update the `og:image` with an absolute URL:
 
 ```html
-<meta name="twitter:image" content="https://example.com/card.9190ce93.png">
 <meta property="og:image" content="https://example.com/card.9190ce93.png">
 <meta property="og:url" content="https://example.com">
 ```
