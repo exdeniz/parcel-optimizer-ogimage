@@ -9,6 +9,8 @@ Sets absolute URLs for `og:image` meta tags. This is required by the spec and re
 
 This plugin uses the value of the `og:url` meta tag to convert `og:image` to an absolute URL.
 
+*Important:* This plugin request [Parcel v2](https://v2.parceljs.org/)
+
 ## Installation
 Depending on which package manager you use, either:
 * `$ npm install --save-dev parcel-optimizer-ogimage`
