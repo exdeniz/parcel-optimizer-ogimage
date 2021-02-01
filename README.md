@@ -53,8 +53,11 @@ Parcel will generate that into something like this:
 <meta property="og:url" content="https://example.com">
 ```
 
+
 ## License
 
 MIT @ Igor Pnev
+
+Thanks [Mark van Seventer](https://github.com/vseventer/parcel-optimizer-friendly-urls) for bootstrap plugin repo.
 
 From [Luke Childs](https://github.com/lukechilds/parcel-plugin-ogimage) and [nothingrandom](https://github.com/nothingrandom/parcel-plugin-ogimage)  and [Eliepse](https://github.com/Eliepse/parcel-plugin-metaimage) code
